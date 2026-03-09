@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ShoppingCart} from 'lucide-react';
+import {  ShoppingCart} from 'lucide-react';//ArrowRight
 import { Button } from '@/components/ui/button';
 
 gsap.registerPlugin(ScrollTrigger);
