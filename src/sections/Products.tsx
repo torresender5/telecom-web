@@ -3,6 +3,12 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {  ShoppingCart} from 'lucide-react';//ArrowRight
 import { Button } from '@/components/ui/button';
+import iphoneHero from '../assets/images/iphone-hero.png'; 
+import samsungS24 from '../assets/images/samsung-s24.png'; 
+import pixel9 from '../assets/images/pixel-9.png'; 
+import motorolaEdge from '../assets/images/motorola-edge.png'; 
+import oneplus12 from '../assets/images/oneplus-12.png'; 
+import xiaomi14 from '../assets/images/xiaomi-14.png'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +27,7 @@ const products: Product[] = [
     name: 'iPhone 16 Pro Max',
     tagline: 'El más potente',
     price: '$1,299',
-    image: '/images/iphone-hero.png',
+    image: iphoneHero,
     sms: `https://wa.me/+584125041143?text=${encodeURIComponent('Buenas Tardes! me puede facilitar informacion para la compra de el telefono *iPhone 16 Pro Max* ')}`
   },
   {
@@ -29,35 +35,35 @@ const products: Product[] = [
     name: 'Samsung Galaxy S24 Ultra',
     tagline: 'Innovación total',
     price: '$1,199',
-    image: '/images/samsung-s24.png',
+    image: samsungS24,
   },
   {
     id: 3,
     name: 'Google Pixel 9 Pro',
     tagline: 'Inteligencia pura',
     price: '$999',
-    image: '/images/pixel-9.png',
+    image: pixel9,
   },
   {
     id: 4,
     name: 'Xiaomi 14 Ultra',
     tagline: 'Rendimiento extremo',
     price: '$899',
-    image: '/images/xiaomi-14.png',
+    image: xiaomi14,
   },
   {
     id: 5,
     name: 'OnePlus 12',
     tagline: 'Velocidad superior',
     price: '$799',
-    image: '/images/oneplus-12.png',
+    image: oneplus12,
   },
   {
     id: 6,
     name: 'Motorola Edge 50',
     tagline: 'Estilo único',
     price: '$699',
-    image: '/images/motorola-edge.png',
+    image: motorolaEdge,
   },
 ];
 
@@ -120,6 +126,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           <img
             src={product.image}
             alt={product.name}
+            fetchPriority="high"
             className="relative z-10 max-h-full w-auto object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
           />
         </div>

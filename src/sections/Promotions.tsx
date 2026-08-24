@@ -3,6 +3,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, Flame, Clock, Percent } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import iphoneHero from '../assets/images/iphone-hero.png'; 
+import samsungS24 from '../assets/images/samsung-s24.png'; 
+import pixel9 from '../assets/images/pixel-9.png'; 
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,8 +186,9 @@ const Promotions = () => {
                   <div className="featured-image relative preserve-3d">
                     <div className="absolute inset-0 bg-[#3b82f6] rounded-full filter blur-[80px] opacity-30" />
                     <img
-                      src="/images/iphone-hero.png"
+                      src={iphoneHero}
                       alt="iPhone 16 Pro Max"
+                      fetchPriority="high"
                       className="relative z-10 w-full max-w-sm drop-shadow-2xl"
                     />
                   </div>
@@ -201,8 +207,9 @@ const Promotions = () => {
               <div className="flex gap-4">
                 <div className="w-24 h-24 flex-shrink-0 bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl flex items-center justify-center">
                   <img
-                    src="/images/samsung-s24.png"
+                    src={samsungS24}
                     alt="Samsung Bundle"
+                    fetchPriority="high"
                     className="w-20 h-auto object-contain group-hover:scale-110 transition-transform"
                   />
                 </div>
@@ -226,8 +233,9 @@ const Promotions = () => {
               <div className="flex gap-4">
                 <div className="w-24 h-24 flex-shrink-0 bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl flex items-center justify-center">
                   <img
-                    src="/images/pixel-9.png"
+                    src={pixel9}
                     alt="Pixel Perfect"
+                    fetchPriority="high"
                     className="w-20 h-auto object-contain group-hover:scale-110 transition-transform"
                   />
                 </div>

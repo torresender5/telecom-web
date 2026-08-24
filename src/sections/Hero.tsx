@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import iphoneHero from '../assets/images/iphone-hero.png'; 
 
 const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -249,8 +250,9 @@ const Hero = () => {
 
               {/* Phone image */}
               <img
-                src="/images/iphone-hero.png"
+                src={iphoneHero}
                 alt="iPhone 16 Pro Max"
+                fetchPriority="high"
                 className="relative z-10 w-full max-w-md lg:max-w-lg drop-shadow-2xl"
                 style={{
                   filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))',

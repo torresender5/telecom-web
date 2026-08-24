@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';//ShoppingCart
 import { Button } from '@/components/ui/button';
+import logo from '../assets/images//logo.png'; 
+
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,8 +55,9 @@ const Navigation = () => {
             <div className="w-72 h-20 rounded-xls gradient-blues flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
               {/* <span className="text-white font-bold text-lg">T</span> */}
               <img
-                src="/images/logo.png"
+                src={logo}
                 alt="iPhone 16 Pro Max"
+                fetchPriority="high"
                 className="relative z-10 w-full max-w-md lg:max-w-lg drop-shadow-2xl"
                 style={{
                   filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))',
